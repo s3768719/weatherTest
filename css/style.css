@@ -1,0 +1,103 @@
+body.melbourne-night-rain {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/melbourne-night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: azure;
+}
+
+body.melbourne-day-cloud {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/melbourne-day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: azure;
+}
+
+.main {
+    padding: 50px;
+    font-family: 'Slackey';font-size: 22px;
+    z-index: 1000;
+    position: relative;
+}
+
+.rain {
+    height: 100vh;
+    background-image: url(../images/rain.png);
+    animation: rain .5s linear infinite;
+    opacity: .5;
+}
+
+.rain:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: lighting1 8s linear infinite;
+    animation: lighting2 11s linear infinite;
+    opacity: 0;
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 20% 100%;
+    }
+}
+
+@keyframes lighting1 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    13% {
+        opacity: .5;
+    }
+    14% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes lighting2 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 0;
+    }
+    13% {
+        opacity: .7;
+    }
+    14% {
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    .rain {
+        opacity: .4;
+    }
+}
+
+@media (max-width: 1000px) {
+    .rain {
+        opacity: .2;
+    }
+}
