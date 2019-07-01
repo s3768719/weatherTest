@@ -39,7 +39,7 @@ body.melbourne-day-cloud {
     height: 100%;
     background: #fff;
     animation: lighting1 8s linear infinite;
-    animation: lighting2 11s linear infinite;
+    animation: lighting2 10s linear infinite;
     opacity: 0;
 }
 
